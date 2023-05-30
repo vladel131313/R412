@@ -1,0 +1,14 @@
+double rec_fib(unsigned n)
+{
+  return n < 2 ? n : rec_fib(n - 1) + rec_fib(n - 2);
+}
+
+double tcr_fib(unsigned n, double a = 0.0, double b = 1.0)
+{
+  return n == 0 ? a : tcr_fib(n - 1, b, a + b);
+}
+
+double tcr_fib_caller(unsigned n)
+{
+  return tcr_fib(n);
+}
